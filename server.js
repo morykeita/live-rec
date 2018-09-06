@@ -27,4 +27,10 @@ io.on('connection', (socket)=>{
     socket.on('typing',(data)=>{
         socket.broadcast.emit('typing',data);
     });
+
+    socket.on('joinRom',(data) =>{
+
+        // query db and return all messages in current room this specific 
+        console.log(data);
+    })
 })
